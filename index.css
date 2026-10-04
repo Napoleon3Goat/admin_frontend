@@ -1,0 +1,70 @@
+/* Colors live here as variables, so the whole look can change in one place. */
+:root {
+  --bg: #f4f2ec;
+  --card: #ffffff;
+  --text: #1f2a1f;
+  --muted: #6b7366;
+  --border: #dcd8cc;
+  --primary: #2f5d3a;      /* forest green */
+  --primary-hover: #244a2d;
+  --error: #b42318;
+  --radius: 10px;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+h1 { margin: 0; font-size: 1.4rem; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.center-screen,
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.brand { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.brand-mark {
+  width: 40px; height: 40px; border-radius: 8px;
+  display: grid; place-items: center;
+  background: var(--primary); color: #fff; font-size: 18px;
+}
+
+label { display: flex; flex-direction: column; gap: 6px; font-size: 0.9rem; font-weight: 500; }
+
+input {
+  font: inherit;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+}
+input:focus { outline: 2px solid var(--primary); outline-offset: 1px; border-color: var(--primary); }
+
+button { font: inherit; cursor: pointer; border-radius: 8px; padding: 10px 14px; }
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+.btn-primary { background: var(--primary); color: #fff; border: none; font-weight: 600; }
+.btn-primary:hover:not(:disabled) { background: var(--primary-hover); }
+.btn-secondary { background: #fff; color: var(--text); border: 1px solid var(--border); margin-top: 16px; }
+
+.muted { color: var(--muted); margin: 4px 0 0; }
+.small { font-size: 0.8rem; text-align: center; }
+.error { color: var(--error); margin: 0; font-size: 0.9rem; }
